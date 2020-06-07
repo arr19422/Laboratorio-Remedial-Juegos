@@ -8,6 +8,7 @@ public class GameControl : MonoBehaviour
 {
     public static GameControl instance;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI finalScoreText;
     private int score = 0;
     public bool gameOver = false;
     public float scrollSpeed = -1.5f;
@@ -35,5 +36,10 @@ public class GameControl : MonoBehaviour
         score++;
         //...and adjust the score text.
         scoreText.text = "Score: " + score.ToString();
+    }
+
+    public void BirdLose()
+    {
+        finalScoreText.text = "Your Final Score: " + score.ToString();
     }
 }

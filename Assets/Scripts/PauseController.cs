@@ -33,6 +33,12 @@ public class PauseController : MonoBehaviour
 
     }
 
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(1);
+    }
+
 
     public void BackMenu()
     {
